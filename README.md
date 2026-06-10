@@ -40,7 +40,6 @@ This lab was performed in Oracle VirtualBox using Ubuntu 26.04 LTS.
 - Security Event Analysis
 - SOC Fundamentals
 
----
 
 ## Tools Used
 
@@ -49,7 +48,6 @@ This lab was performed in Oracle VirtualBox using Ubuntu 26.04 LTS.
 - Terminal
 - Auth Logs (/var/log/auth.log)
 
----
 
 # Part 1: User Creation
 
@@ -64,7 +62,6 @@ cat /etc/passwd | grep testuser
 
 <img src="screenshots/user-created.png" width="600">
 
-________________________________
 
 Part 2: Failed Authentication Simulation
 
@@ -77,7 +74,6 @@ Generated authentication failures for investigation.
 
 <img src="screenshots/failed-login.png" width="600">
 
-________________________________
 
 Part 3: Authentication Log Analysis
 
@@ -93,7 +89,6 @@ Failed SU attempts
 auth-log-analysis.png
 <img src="screenshots/auth-log-analysis.png.png " width="600">
 
-________________________________
 
 Part 4: Privilege Escalation
 
@@ -112,8 +107,6 @@ testuser : testuser sudo users
 <img src="screenshots/privilege-escalation-log.png " width="600">
 
 
-________________________________
-
 Part 5: Privilege Escalation Investigation
 
 Searched authentication logs:
@@ -129,7 +122,6 @@ detected and investigated.
 
 <img src="screenshots/sudo-group-memebership.png " width="600">
 
-________________________________
 
 Key Security Findings
 
@@ -138,7 +130,6 @@ User account creation can be verified through Linux account databases
 Privilege escalation events generate audit records
 Authentication logs provide valuable security monitoring data
 
-________________________________
 
 Lessons Learned
 
@@ -149,8 +140,3 @@ Security log analysis
 Authentication monitoring
 SOC investigation techniques
 Privilege escalation detection
-
-
-
-
-
