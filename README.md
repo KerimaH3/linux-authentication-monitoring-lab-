@@ -49,28 +49,29 @@ This lab was performed in Oracle VirtualBox using Ubuntu 26.04 LTS.
 - Auth Logs (/var/log/auth.log)
 
 # Part 1: User creation
-'''bash
-
+```bash
 sudo adduser testuser
-
+```
 verified account creation:
-
+```
 cat /etc/passwd | grep testuser
-
+```
 <img src="screenshots/user-created.png" width="600">
 
 # Part 2: Failed Authentication Simulation
 Attempted to switch to the test account using an incorrect password multiple times: 
-'''bash
+```bash
 su testuser
+```
 Generated authentication failures for investigation.
 
 <img src="screenshots/failed-login.png" width="600">
 
 # Part 3: Authentication Log Analysis
 Reviewed authentication logs:
-'''bash
+```bash
 sudo cat /var/log/auth.log | tail -20
+```
 Observed:
 - Authentication failures
 - Password check failures
@@ -80,11 +81,14 @@ Observed:
 
 # Part 4: Privilege Escalation 
 Added testuser to the sudo group:
-'''bash 
-sudo usermod -aG sudo testuser 
+```bash 
+sudo usermod -aG sudo testuser
+```
 verified group membership:
-'''bash
-groups testuser 
+
+```bash
+groups testuser
+```
 output:
 testuser : testuser sudo users
 
