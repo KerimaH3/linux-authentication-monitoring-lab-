@@ -50,8 +50,11 @@ This lab was performed in Oracle VirtualBox using Ubuntu 26.04 LTS.
 
 # Part 1: User creation
 '''bash
+
 sudo adduser testuser
+
 verified account creation:
+
 cat /etc/passwd | grep testuser
 
 <imag src="screenshots/user-created.png" width="600">
