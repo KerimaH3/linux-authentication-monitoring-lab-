@@ -77,7 +77,7 @@ Observed:
 - Password check failures
 - Failed SU attempts
   
-<imag src="screenshots/auth-log-analysis.png" width="600">
+<img src="screenshots/auth-log-analysis.png" width="600">
 
 # Part 4: Privilege Escalation 
 Added testuser to the sudo group:
