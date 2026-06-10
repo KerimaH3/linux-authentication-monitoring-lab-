@@ -57,7 +57,7 @@ verified account creation:
 
 cat /etc/passwd | grep testuser
 
-<imag src="screenshots/user-created.png" width="600">
+<img src="screenshots/user-created.png" width="600">
 
 # Part 2: Failed Authentication Simulation
 Attempted to switch to the test account using an incorrect password multiple times: 
@@ -65,7 +65,7 @@ Attempted to switch to the test account using an incorrect password multiple tim
 su testuser
 Generated authentication failures for investigation.
 
-<imag src="screenshots/failed-login.png" width="600">
+<img src="screenshots/failed-login.png" width="600">
 
 # Part 3: Authentication Log Analysis
 Reviewed authentication logs:
@@ -88,17 +88,18 @@ groups testuser
 output:
 testuser : testuser sudo users
 
-<imag src="screenshots/privilege-escalation-log.png" width="600">
+<img src="screenshots/privilege-escalation-log.png" width="600">
 
 # Part 5: Privilege Escalation Investigation 
 searched authentication logs:
-'''bash 
+```bash 
 sudo cat /var/log/auth.log | grep usermod
+```
 Obderved: 
 usermod: add 'testuser' to group 'sudo'
 This event demonstrate how administrator privilege changes can be detected and invetigated.
 
-<imag src="screenshots/sudo-group-membership.png" width="600">
+<img src="screenshots/sudo-group-membership.png" width="600">
 
 # Key Security Findings
 - Failed login attempts are recorded in auth.log
