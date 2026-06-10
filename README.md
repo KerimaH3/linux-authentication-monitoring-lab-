@@ -1,11 +1,9 @@
 # Linux Authentication Monitoring Lab
 
 ## Overview
+This project demonstrates Security Operations Center (SOC) monitoring activities using Ubuntu Linux. Authentication events were generated and analyzed to investigate failed login attempts, user account creation, and privilege escalation activity. System logs were reviewed using the Linux authentication log (/var/log/auth.log) to identify security-relevant events and verify account changes.
 
-This project demonstrates basic Security Operations Center (SOC) activities using Ubuntu Linux. The goal was to simulate authentication events, analyze security logs, investigate failed login attempts, and monitor privilege escalation activity.
-
-This lab was performed in Oracle VirtualBox using Ubuntu 26.04 LTS.
-
+The lab was performed in Oracle VirtualBox using Ubuntu 26.04 LTS.
 
 ## Objectives
 
@@ -29,7 +27,6 @@ This lab was performed in Oracle VirtualBox using Ubuntu 26.04 LTS.
 ### Guest Operating System
 - Ubuntu 26.04 LTS
 
-
 ## Skills Demonstrated
 
 - Linux Administration
@@ -39,7 +36,6 @@ This lab was performed in Oracle VirtualBox using Ubuntu 26.04 LTS.
 - Privilege Escalation Investigation
 - Security Event Analysis
 - SOC Fundamentals
-
 
 ## Tools Used
 
@@ -106,16 +102,31 @@ This event demonstrate how administrator privilege changes can be detected and i
 <img src="screenshots/sudo-group-membership.png" width="600">
 
 # Key Security Findings
-- Failed login attempts are recorded in auth.log
-- User account creation can be verified through Linux account database
-- privilege escalation events generate audit records
-- Authentication logs provide valuable security monitoring data
+
+- Failed authentication attempts were successfully recorded in auth.log
+- User account creation events were verified through the Linux account database
+- Privilege escalation activities generated auditable log entries
+- Administrative group membership changes were detected and investigated
+- Authentication logs provide valuable visibility into user activity and security events
+
+# Technologies & Concepts
+
+- Linux Administration
+- User Account Management
+- Authentication Monitoring
+- Security Log Analysis
+- Privilege Escalation Detection
+- Event Investigation
+- Ubuntu Linux
+- VirtualBox
+- SOC Fundamentals
 
 # Lesson Learned 
-This lab provided hands-on experence with:
-- Linux user management
-- Security log analysis
-- Authentication monitoring
-- SOC investigation techniques
-- Privilege escalation detection 
+Through this lab, I gained hands-on experience with:
 
+- Creating and managing Linux user accounts
+- Investigating failed authentication attempts
+- Analyzing authentication logs for security events
+- Detecting privilege escalation activities
+- Using Linux command-line tools for log analysis
+- Understanding how SOC analysts monitor and investigate user activity
